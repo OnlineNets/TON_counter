@@ -8,5 +8,7 @@ export async function run(provider: NetworkProvider) {
         Counter.createFromConfig({}, await compile('Counter'))
     );
 
+    console.log("sending~~~~");
     await counter.sendNumber(provider.sender(), toNano('0.01'), 123n);
+    console.log("is sent");
 }
